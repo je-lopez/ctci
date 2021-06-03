@@ -1,0 +1,11 @@
+{
+  "name": "ctci",
+  "version": "1.0.0",
+  "description": "Cracking The Coding Interview Questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge E Lopez",
+  "license": "MIT"
+}
