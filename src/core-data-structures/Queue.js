@@ -8,7 +8,19 @@ export default class Queue {
   }
 
   enqueue(data) {
+    let exit = false;
+
+    // TODO: test the log: combine these two checks and use && for the log, perhaps like "data && console.log(...)" ?
     if (!data) {
+      exit = true;
+    }
+
+    if (this.size === this.maxSize) {
+      console.log(`Warning: Queue has already reached its capacity of ${this.maxSize}. Item "${data}" can not be added`);
+      exit = true;
+    }
+
+    if (exit) {
       return undefined;
     }
 
