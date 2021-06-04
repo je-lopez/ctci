@@ -104,6 +104,18 @@ export default class LinkedList {
     return undefined;
   }
 
+  contains(element) {
+    let node = this.head;
+
+    while (node) {
+      if (node.data === element) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   getSize() {
     return this.size;
   }
@@ -120,6 +132,10 @@ export default class LinkedList {
     }
 
     return node;
+  }
+
+  peek() {
+    return this.head;
   }
 
   printList() {
