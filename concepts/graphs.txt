@@ -1,0 +1,66 @@
+Type of Graphs
+1. trees
+2. graphs
+
+***********************************************************************************************
+** Trees                                                                                     **
+***********************************************************************************************
+- a data structure composed of nodes.
+- typically has a root node
+- the root node has 0 or more child nodes, each having 0 or more child nodes, etc
+- can NOT contain cycles
+- a node is called a leaf if it has no children
+
+Tree vs Binary Tree:
+- a binary tree is a tree which has up to 2 child nodes
+
+Binary Tree vs Binary Search Tree:
+- a binary search tree is a binary tree in which every node fits this specific ordering:
+    All left descendents <= n < all right descendents
+- duplicates can behave differently depending on interview question (clarify this)
+
+Balanced vs Unbalanced:
+- balanced tree really means 'not very inbalanced'
+- balanced trees allow insert and lookup of O(log n)
+
+Complete Binary Tree:
+- a binary tree in which every level is filled, except for potentially the last level, meaning the deepest most right node
+
+Full Binary Tree:
+- a binary tree in which every node has 0 or 2 children. aka a node can NOT have 1 child node
+
+Perfect Binary Tree:
+- a binary tree that is both full and complete
+- all leaf nodes are at the same level and the level is full
+
+Binary Tree Traversals:
+1. in-order traversal (most common)
+  - visit the left branch, then the current branch, finally the right branch
+  - w/BST, nodes are visited in ascending order
+2. pre-order traversal
+  - visit current node before its children
+  - root is always first node visited
+3. post-rder traversal
+  - visit current node after its children
+  - root is always the last node visited
+
+Binary Heaps:
+- a complete binary tree
+- has 2 operations, insert and extract_min/extract_max - both are O(log n)
+1. min-heap
+  - each node is smaller than its children
+  - the root node is the minimum element in the tree
+  - when we insert, we start by inserting the element at the bottom, then swap w/parent until finding its position
+  - to extract, the min is always on top. Remove this element and swap with the last element, then bubble down until finding its position.
+  - note: when bubbling during extracting, take the smaller element to maintain ordering
+2. max-heap
+  - each node is bigger than its children
+  - the root node is the maximum element in the tree
+
+Tries (aka prefix trees):
+- a variant of an n-ary tree in which characters are stored at each node
+- each path down the tree may represent a word
+- the * nodes (aka null nodes) are often used to indidcate complete words
+- the implementation of * nodes might be a special type of node, or simply a flag
+- a node in a trie can have from 1 to alphabet size + 1 children, or 0 if we use a flag
+- commonly used to store the entire English language for quick prefix lookups -in O(k) where k is lenght of structure
