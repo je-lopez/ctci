@@ -1,4 +1,4 @@
-import Node from './Node';
+import Node from './nodes/Node';
 
 export default class Stack {
   constructor(maxSize) {
