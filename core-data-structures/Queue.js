@@ -1,4 +1,5 @@
 import Node from './nodes/Node';
+import DoublyNode from './nodes/DoublyNode';
 
 export default class Queue {
   constructor(maxSize) {
@@ -21,7 +22,7 @@ export default class Queue {
     }
 
     if (exit) {
-      return undefined;
+      return null;
     }
 
     const node = new Node(data);
@@ -44,7 +45,7 @@ export default class Queue {
     let node = this.front;
 
     if (!node) {
-      return undefined;
+      return null;
     }
 
     this.front = node.next;

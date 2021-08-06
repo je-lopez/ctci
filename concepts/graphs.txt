@@ -63,4 +63,23 @@ Tries (aka prefix trees):
 - the * nodes (aka null nodes) are often used to indidcate complete words
 - the implementation of * nodes might be a special type of node, or simply a flag
 - a node in a trie can have from 1 to alphabet size + 1 children, or 0 if we use a flag
-- commonly used to store the entire English language for quick prefix lookups -in O(k) where k is lenght of structure
+- commonly used to store the entire English language for quick prefix lookups -in O(k) where k is length of structure
+- useful with problems involving lists of valid words. It can tell us if a string is a prefix of any valid word
+
+***********************************************************************************************
+** Graphs                                                                                    **
+***********************************************************************************************
+- a collection of nodes wih edges between (some of) them
+- can be directed or undirected
+- the graph might consist of multiple isolated subgraphs
+- if there is a path between every pair of vertices, it's called a connected graph
+- may or may not contain cycles (acyclic graphs are ones without)
+
+There are two ways to represent graphs:
+1. adjacency list
+2. adjacency matrix
+
+Adjacency List:
+-
+
+Adjacency Matrix:
